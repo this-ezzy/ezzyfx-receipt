@@ -5,3 +5,7 @@ Buildless PWA for manually recording buy, sell, swap, and currency exchange tran
 PNG generation uses the same canvas as the live preview. Customer sends and receives are entered explicitly; the agreed rate is a recorded quote, not an automatic calculation. No live trade or payment verification is performed. Drafts and up to 50 receipts are stored in browser localStorage, without cross-device sync. Clearing browser storage removes these records. Private hosting controls online access; offline records remain accessible on the owner's device.
 
 Share uses the native file share menu where supported, otherwise downloads the PNG for attaching manually. Select WhatsApp yourself in the share menu. PWA shell is cached after the first successful load. Install prompts depend on the browser; manual Safari instructions are provided.
+
+## Deploy to Vercel
+
+Import `this-ezzy/ezzyfx-receipt` in Vercel. Choose **Other** as the framework, leave the build command empty, and use `dist` as the output directory. The checked-in `vercel.json` supplies the output directory and PWA headers. Production access is intended to be public; saved transaction data remains in each browser.
